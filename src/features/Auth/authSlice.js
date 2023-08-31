@@ -69,7 +69,7 @@ export const authSlice = createSlice({
             .addCase(updateUserAsync.pending, (state) => {
                 state.status = 'loading';
             })
-            .addCase(updateUserAsync.rejected, (state, action) => {
+            .addCase(updateUserAsync.fulfilled, (state, action) => {
                 state.status = 'idle';
                 state.loggedInUser = action.payload;
             });
