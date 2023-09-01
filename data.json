@@ -1060,6 +1060,15 @@
           "city": "souvik city",
           "state": "wb",
           "pinCode": "772211"
+        },
+        {
+          "name": "Kumar Souvik Saha",
+          "email": "souviksaha1606@gmail.com",
+          "phone": "09609529013",
+          "street": "Uttarbali",
+          "city": "Kharagpur",
+          "state": "West Bengal",
+          "pinCode": "721145"
         }
       ],
       "id": 1
@@ -1079,6 +1088,22 @@
         }
       ],
       "id": 2
+    },
+    {
+      "email": "Rani@gmail.com",
+      "password": "Rani1234",
+      "addresses": [
+        {
+          "name": "Rani",
+          "email": "Rani2@gmail.com",
+          "phone": "1231231111",
+          "street": "Rani street 2",
+          "city": "Rani city 2",
+          "state": "rani state",
+          "pinCode": "111111"
+        }
+      ],
+      "id": 3
     }
   ],
   "cart": [],
@@ -1299,6 +1324,126 @@
       },
       "status": "pending",
       "id": 4
+    },
+    {
+      "items": [
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "itemId": 2,
+          "id": 2
+        }
+      ],
+      "totalAmount": 899,
+      "totalItems": 1,
+      "user": {
+        "email": "souviksaha1606@gmail.com",
+        "password": "Abcd1234",
+        "addresses": [
+          {
+            "name": "Souvik saha",
+            "email": "souvik@gmail.com",
+            "phone": "1111222244",
+            "street": "souvik street",
+            "city": "souvik city",
+            "state": "wb",
+            "pinCode": "772211"
+          },
+          {
+            "name": "Kumar Souvik Saha",
+            "email": "souviksaha1606@gmail.com",
+            "phone": "09609529013",
+            "street": "Uttarbali",
+            "city": "Kharagpur",
+            "state": "West Bengal",
+            "pinCode": "721145"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Kumar Souvik Saha",
+        "email": "souviksaha1606@gmail.com",
+        "phone": "09609529013",
+        "street": "Uttarbali",
+        "city": "Kharagpur",
+        "state": "West Bengal",
+        "pinCode": "721145"
+      },
+      "status": "pending",
+      "id": 5
+    },
+    {
+      "items": [
+        {
+          "title": "Flying Wooden Bird",
+          "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
+          "price": 51,
+          "discountPercentage": 15.58,
+          "rating": 4.41,
+          "stock": 17,
+          "brand": "Flying Wooden",
+          "category": "home-decoration",
+          "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
+          "images": [
+            "https://i.dummyjson.com/data/products/27/1.jpg",
+            "https://i.dummyjson.com/data/products/27/2.jpg",
+            "https://i.dummyjson.com/data/products/27/3.jpg",
+            "https://i.dummyjson.com/data/products/27/4.jpg",
+            "https://i.dummyjson.com/data/products/27/thumbnail.webp"
+          ],
+          "quantity": 1,
+          "user": 3,
+          "itemId": 27,
+          "id": 1
+        }
+      ],
+      "totalAmount": 51,
+      "totalItems": 1,
+      "user": {
+        "email": "Rani@gmail.com",
+        "password": "Rani1234",
+        "addresses": [
+          {
+            "name": "Rani ",
+            "email": "Rani@gmail.com",
+            "phone": "1231231230",
+            "street": "Rani Street",
+            "city": "Rani city",
+            "state": "Rani state",
+            "pinCode": "776655"
+          }
+        ],
+        "id": 3
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Rani ",
+        "email": "Rani@gmail.com",
+        "phone": "1231231230",
+        "street": "Rani Street",
+        "city": "Rani city",
+        "state": "Rani state",
+        "pinCode": "776655"
+      },
+      "status": "pending",
+      "id": 6
     }
   ]
 }
