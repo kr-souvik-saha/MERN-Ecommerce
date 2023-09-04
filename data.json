@@ -26,7 +26,7 @@
       "price": 899,
       "discountPercentage": 17.94,
       "rating": 4.44,
-      "stock": 34,
+      "stock": 0,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
@@ -1109,7 +1109,31 @@
       "role": "user"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "title": "Hyaluronic Acid Serum",
+      "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+      "price": 19,
+      "discountPercentage": 13.31,
+      "rating": 4.83,
+      "stock": 110,
+      "brand": "L'Oreal Paris",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/16/1.png",
+        "https://i.dummyjson.com/data/products/16/2.webp",
+        "https://i.dummyjson.com/data/products/16/3.jpg",
+        "https://i.dummyjson.com/data/products/16/4.jpg",
+        "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+      ],
+      "productId": 16,
+      "quantity": 5,
+      "user": 2,
+      "itemId": 16,
+      "id": 1
+    }
+  ],
   "orders": [
     {
       "items": [
@@ -1163,7 +1187,7 @@
         "state": "wb",
         "pinCode": "772211"
       },
-      "status": "pending",
+      "status": "dispatched",
       "id": 1
     },
     {
@@ -1215,7 +1239,7 @@
         "state": "wb",
         "pinCode": "123123"
       },
-      "status": "pending",
+      "status": "cancelled",
       "id": 2
     },
     {
@@ -1270,7 +1294,7 @@
         "state": "wb",
         "pinCode": "123123"
       },
-      "status": "pending",
+      "status": "delivered",
       "id": 3
     },
     {

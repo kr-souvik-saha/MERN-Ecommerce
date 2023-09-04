@@ -24,7 +24,7 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
-import { ITEMS_PER_PAGE } from "../../../app/constants";
+import { ITEMS_PER_PAGE, discountedPrice } from "../../../app/constants";
 
 const sortOptions = [
   { name: "Best Rating", sort: "rating", order: "desc", current: false },
@@ -510,10 +510,7 @@ function ProductGrid({ products }) {
                     </div>
                     <div>
                       <p className="text-sm block font-medium text-gray-900">
-                        $
-                        {Math.round(
-                          product.price * (1 - product.discountPercentage / 100)
-                        )}
+                        ${discountedPrice(product)}
                       </p>
                       <p className="text-sm block line-through font-medium text-gray-400">
                         ${product.price}
@@ -523,6 +520,11 @@ function ProductGrid({ products }) {
                   {product.deleted && (
                     <div>
                       <p className="text-sm text-red-400">product deleted</p>
+                    </div>
+                  )}
+                  {product.stock <= 0 && (
+                    <div>
+                      <p className="text-sm text-red-400">out of stock</p>
                     </div>
                   )}
                 </div>

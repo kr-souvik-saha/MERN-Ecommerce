@@ -1,3 +1,4 @@
+import Footer from "../features/common/Footer";
 import NavBar from "../features/navbar/Navbar";
 
 const {
@@ -6,10 +7,12 @@ const {
 
 function ProductDetailPage() {
   return (
-    <>
-      <NavBar></NavBar>
-      <ProductDetail></ProductDetail>
-    </>
+    <div>
+      <NavBar>
+        <ProductDetail></ProductDetail>
+      </NavBar>
+      <Footer></Footer>
+    </div>
   );
 }
 
