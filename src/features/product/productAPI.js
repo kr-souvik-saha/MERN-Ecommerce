@@ -1,7 +1,7 @@
 export function fetchAllProducts() {
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch('http://localhost:8080/products')
+    const response = await fetch('http://localhost:5000/products')
     const data = await response.json()
     resolve({
       data
@@ -34,7 +34,7 @@ export function fetchProductsByFilters(
 
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
-    const response = await fetch('http://localhost:8080/products?' + queryString)
+    const response = await fetch('http://localhost:5000/products?' + queryString)
     const data = await response.json()
     const totalItems = await response.headers.get('X-Total-Count')
     resolve({
@@ -48,7 +48,7 @@ export function fetchProductsByFilters(
 
 export function fetchProductById(id) {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/products/' + id);
+    const response = await fetch('http://localhost:5000/products/' + id);
     const data = await response.json();
     resolve({
       data
@@ -58,7 +58,7 @@ export function fetchProductById(id) {
 
 export function fetchCategories() {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/categories')
+    const response = await fetch('http://localhost:5000/categories')
     const data = await response.json()
     resolve({
       data
@@ -68,7 +68,7 @@ export function fetchCategories() {
 
 export function fetchBrands() {
   return new Promise(async (resolve) => {
-    const response = await fetch('http://localhost:8080/brands')
+    const response = await fetch('http://localhost:5000/brands')
     const data = await response.json()
     resolve({
       data
