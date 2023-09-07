@@ -1,6 +1,6 @@
 export function createUser(userData) {
     return new Promise(async (resolve) => {
-        const response = await fetch('http://localhost:8080/users', {
+        const response = await fetch('http://localhost:8080/auth/signup', {
             method: 'POST',
             body: JSON.stringify(userData),
             headers: {
@@ -18,7 +18,7 @@ export function createUser(userData) {
 export function checkUser(loginInfo) {
     return new Promise(async (resolve, reject) => {
         try {
-            const response = await fetch('http://localhost:8080/users', {
+            const response = await fetch('http://localhost:8080/auth/login', {
                 method: 'POST',
                 body: JSON.stringify(loginInfo),
                 headers: {
@@ -38,14 +38,15 @@ export function checkUser(loginInfo) {
             reject(error);
         }
 
+        // TODO: on server it will only return some info of user (not password)
     });
 }
 
-export function signOut() {
+export function signOut(userId) {
     return new Promise(async (resolve) => {
-        //Todo: on server we will remove user session info
+        // TODO: on server we will remove user session info
         resolve({
             data: 'success'
-        })
-    })
+        });
+    });
 }

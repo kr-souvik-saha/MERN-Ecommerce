@@ -1,20 +1,18 @@
-import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { selectError, selectLoggedInUser } from "../authSlice";
 import { Link, Navigate } from "react-router-dom";
+import { checkUserAsync } from "../authSlice";
 import { useForm } from "react-hook-form";
-import { checkUserAsync, selectError, selectLoggedInUser } from "../authSlice";
 
-export function Login() {
+export default function Login() {
+  const dispatch = useDispatch();
+  const error = useSelector(selectError);
+  const user = useSelector(selectLoggedInUser);
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
-
-  const dispatch = useDispatch();
-  const user = useSelector(selectLoggedInUser);
-  const error = useSelector(selectError);
 
   return (
     <>
@@ -33,12 +31,13 @@ export function Login() {
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
           <form
-            className="space-y-6"
+            noValidate
             onSubmit={handleSubmit((data) => {
               dispatch(
                 checkUserAsync({ email: data.email, password: data.password })
               );
             })}
+            className="space-y-6"
           >
             <div>
               <label
@@ -58,10 +57,11 @@ export function Login() {
                     },
                   })}
                   type="email"
-                  autoComplete="email"
-                  required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
               </div>
             </div>
 
@@ -75,7 +75,7 @@ export function Login() {
                 </label>
                 <div className="text-sm">
                   <Link
-                    to={"/forgot-password"}
+                    to="/forgot-password"
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
@@ -89,10 +89,11 @@ export function Login() {
                     required: "password is required",
                   })}
                   type="password"
-                  autoComplete="current-password"
-                  required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
+                {errors.password && (
+                  <p className="text-red-500">{errors.password.message}</p>
+                )}
               </div>
               {error && <p className="text-red-500">{error.message}</p>}
             </div>
