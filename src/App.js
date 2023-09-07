@@ -150,6 +150,7 @@ function App() {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id));
       dispatch(fetchLoggedInUserAsync(user.id));
+      console.log(user);
     }
   }, [dispatch, user]);
 

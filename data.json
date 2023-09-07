@@ -1122,6 +1122,16 @@
       ],
       "id": 3,
       "role": "user"
+    },
+    {
+      "email": "souviksaha1606@gmail.com",
+      "password": "Abcd1234",
+      "id": 4
+    },
+    {
+      "email": "souviksaha1606@gmail.com",
+      "password": "Abcd1234",
+      "id": 5
     }
   ],
   "cart": [
@@ -1147,6 +1157,28 @@
       "user": 2,
       "itemId": 16,
       "id": 1
+    },
+    {
+      "title": "iPhone X",
+      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      "price": 899,
+      "discountPercentage": 17.94,
+      "rating": 4.44,
+      "stock": 0,
+      "brand": "Apple",
+      "category": "smartphones",
+      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/2/1.jpg",
+        "https://i.dummyjson.com/data/products/2/2.jpg",
+        "https://i.dummyjson.com/data/products/2/3.jpg",
+        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+      ],
+      "deleted": false,
+      "productId": "64f70a2be6f1cf7edfa7ac58",
+      "quantity": 1,
+      "user": "64f7410ab00c7c2beaaf52df",
+      "id": 2
     }
   ],
   "orders": [
